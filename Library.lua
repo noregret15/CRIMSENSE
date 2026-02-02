@@ -43,8 +43,8 @@ function Library:CreateWindow(name)
         Name = name or "Window",
         Size = UDim2.new(0, 520, 0, 380),
         Position = UDim2.new(0.5, -260, 0.5, -190),
-        BackgroundColor3 = Library.Theme.Background,
-        BorderColor3 = Library.Theme.Outline,
+        BackgroundColor3 = self.Theme.Background,
+        BorderColor3 = self.Theme.Outline,
         BorderSizePixel = 1,
         ClipsDescendants = true,
         Parent = ScreenGui,
@@ -52,7 +52,7 @@ function Library:CreateWindow(name)
 
     local TopBar = Create("Frame", {
         Size = UDim2.new(1, 0, 0, 36),
-        BackgroundColor3 = Library.Theme.Secondary,
+        BackgroundColor3 = self.Theme.Secondary,
         BorderSizePixel = 0,
         Parent = Frame,
     })
@@ -61,9 +61,9 @@ function Library:CreateWindow(name)
         Size = UDim2.new(0, 200, 1, 0),
         Position = UDim2.new(0, 12, 0, 0),
         BackgroundTransparency = 1,
-        Font = Library.Theme.Font,
+        Font = self.Theme.Font,
         Text = name or "CRIMSENSE",
-        TextColor3 = Library.Theme.Text,
+        TextColor3 = self.Theme.Text,
         TextSize = 15,
         TextXAlignment = Enum.TextXAlignment.Left,
         Parent = TopBar,
@@ -182,12 +182,12 @@ function Library:CreateWindow(name)
         local tabButton = Create("TextButton", {
             Size = UDim2.new(0, 90, 1, -8),
             Position = UDim2.new(0, 0, 0, 4),
-            BackgroundColor3 = Library.Theme.Background,
-            BorderColor3 = Library.Theme.Outline,
+            BackgroundColor3 = self.Theme.Background,
+            BorderColor3 = self.Theme.Outline,
             BorderSizePixel = 1,
-            Font = Library.Theme.Font,
+            Font = self.Theme.Font,
             Text = tabName,
-            TextColor3 = Library.Theme.TextDim,
+            TextColor3 = self.Theme.TextDim,
             TextSize = 13,
             Parent = self.TabContainer,
         })
